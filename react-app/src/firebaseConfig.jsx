@@ -9,13 +9,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBH2z1PSf5MVieaoE0fD1Axwi4CFw0lJXg",
-  authDomain: "phishing-detector-76aea.firebaseapp.com",
-  projectId: "phishing-detector-76aea",
-  storageBucket: "phishing-detector-76aea.firebasestorage.app",
-  messagingSenderId: "456331866677",
-  appId: "1:456331866677:web:24f5d33c18a8768367b77c",
-  measurementId: "G-DSLFERSQQP"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
