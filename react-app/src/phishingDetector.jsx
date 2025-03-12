@@ -10,7 +10,7 @@ const PhishingDetector = () => {
     const checkEmail = async () => {
         setError(null); // Reset error before making a request
         try {
-            const response = await axios.post("http://127.0.0.1:5000/predict", {
+            const response = await axios.post("https://phishing-detector-backend-cjxp.onrender.com/predict", {
                 email: email
             });
             setResult(response.data);
