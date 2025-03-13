@@ -17,6 +17,11 @@
 .user-info {
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .user-avatar {
@@ -74,4 +79,33 @@
 
 .link:hover {
     text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .signout-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .steps-list {
+        text-align: left;
+        padding-left: 20px;
+    }
 }
