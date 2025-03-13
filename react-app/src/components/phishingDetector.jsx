@@ -66,7 +66,7 @@ const PhishingDetector = () => {
 
             <div>
                 <Link to="/">
-                    <button>Back to Dashboard</button>
+                    <a className="link-to-dashboard">Back to Dashboard</a>
                 </Link>
             </div>
         </div>

@@ -1,66 +1,110 @@
-/* General styles */
+/* General Styling */
 body {
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
+/* Main Container */
 .detector {
-    background-color: rgb(110, 230, 110);
-    color: rgb(0, 0, 0);
+    background-color: rgb(160, 255, 160);
+    color: black;
     text-align: center;
     padding: 40px;
     letter-spacing: 1px;
     border-radius: 10px;
     width: 50%;
-    margin: 20px auto;
-    box-shadow: 0px 0px 10px rgb(0, 60, 0);
+    margin: auto;
+    box-shadow: 0px 0px 15px rgb(0, 60, 0);
+    max-width: 600px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-/* Textarea styling */
+/* Input Styling */
 textarea {
-    width: 100%;
-    height: 120px;
+    width: 90%;
+    max-width: 500px;
+    height: 60px;
+    min-height: 60px;
+    font-size: 16px;
+    border: 2px solid #006400;
+    border-radius: 8px;
     padding: 10px;
-    border: 2px solid rgb(0, 75, 0);
-    border-radius: 5px;
-    font-size: 14px;
+    outline: none;
     resize: vertical;
+    display: block;
+    margin: 10px auto;
+    position: relative;
 }
 
-/* File upload and button styles */
-.btn-check, .file-upload {
+textarea:focus {
+    border-color: rgb(10, 100, 10);
+    box-shadow: 0px 0px 10px rgba(10, 100, 10, 0.5);
+    background-color: rgb(210, 255, 210);
+}
+
+/* Buttons */
+.file-upload {
+    display: block;
+    text-align: center;
+    border: 1px solid rgb(0, 100, 0);
+    border-radius: 10px;
+    color: rgb(0, 100, 0);
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+}
+
+.btn-check{
     background-color: rgb(10, 100, 10);
     color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
+    padding: 12px 25px;
+    margin: 10px 0px;
+    border: 2px solid rgb(105, 250, 105);
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 500px;
 }
 
 .btn-check:hover {
-    background-color: rgb(185, 255, 185);
-    border: 2px solid rgb(0, 75, 0);
-    color: rgb(0, 75, 0);
+    color: rgb(0, 100, 0);
+    background-color: rgb(200, 255, 200);
+    transform: scale(0.95);
+    border: 2px solid rgb(0, 100, 0);
+    transform: scale(1.05);
 }
 
-.btn-check:active {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(0, 75, 0);
-    color: rgb(0, 75, 0);
+.link-to-dashboard {
+    color: rgb(0, 100, 0);
+    text-decoration: 1px underline rgb(0, 100, 0);
 }
 
-/* Result container */
+/* Result Box */
 .result {
     background-color: white;
-    width: 250px;
-    margin: 15px auto;
+    width: 90%;
+    max-width: 500px;
+    height: 75px;
+    margin: 10px auto;
     padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    position: relative;
 }
 
 .result p {
@@ -68,39 +112,53 @@ textarea {
     font-weight: bold;
 }
 
-/* Make everything responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .detector {
-        width: 80%;
+        width: 90%;
         padding: 30px;
     }
 
-    textarea {
-        height: 100px;
-        font-size: 13px;
+    textarea, .btn-check, .file-upload {
+        width: 100%;
+        max-width: none;
     }
 
-    .btn-check, .file-upload {
-        width: 100%;
-        padding: 12px;
+    textarea {
+        height: 150px;
     }
 }
 
+/* Extra Small Screens (less than 480px) */
 @media (max-width: 480px) {
-    .detector {
-        width: 100%;
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
         padding: 20px;
-        margin: 0;
-        border-radius: 0;
+    }
+
+    .detector {
+        width: 95%;
+        padding: 20px;
         box-shadow: none;
+        min-height: auto;
     }
 
     textarea {
-        height: 80px;
-        font-size: 12px;
+        height: 140px;
+        font-size: 14px;
     }
 
-    .btn-check, .file-upload {
+    .btn-check {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .file-upload {
         font-size: 14px;
         padding: 10px;
     }
