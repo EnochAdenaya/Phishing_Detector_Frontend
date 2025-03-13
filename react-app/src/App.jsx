@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./appRouter";
 
-const BACKEND_URL = "https://phishing-detector-backend-cjxp.onrender.com/";
+// const BACKEND_URL = "https://phishing-detector-backend-cjxp.onrender.com/";
 
 function App() {
     useEffect(() => {
